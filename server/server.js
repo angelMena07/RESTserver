@@ -7,7 +7,8 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use(require('./routes/usuario'));
+//config global de rutas
+app.use(require('./routes/index'));
 
 mongoose.connect(process.env.URLDB, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }, (err, res) => {
 
